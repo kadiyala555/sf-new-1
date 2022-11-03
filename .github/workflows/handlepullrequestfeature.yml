@@ -6,7 +6,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   pull_request:
     branches: master
-   # Jobs to be executed
+   # Jobs to be executeds
 jobs:
     pmd-run:
         runs-on: ubuntu-latest
