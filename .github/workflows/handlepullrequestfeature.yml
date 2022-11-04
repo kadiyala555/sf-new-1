@@ -6,7 +6,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   pull_request:
     branches: master
-   # Jobs to be executed
+   # Jobs to be executeds
 jobs:
     pmd-run:
         runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
               shell: bash
               run: |
-                  echo ${{ secrets.DEVHUB_SFDX_URL}} >./DEVHUB_SFDX_URL.txt
+                  echo ${{ secrets.DEVHUB_SFDX_URL}} > ./DEVHUB_SFDX_URL.txt
                   secretFileSize=$(wc -c "./DEVHUB_SFDX_URL.txt" | awk '{print $1}')
                   if [ $secretFileSize == 1 ]; then
                       echo "Missing DEVHUB_SFDX_URL secret. Is this workflow running on a fork?";
