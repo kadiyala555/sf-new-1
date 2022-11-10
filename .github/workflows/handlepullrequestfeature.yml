@@ -47,7 +47,7 @@ jobs:
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
               shell: bash
               run: |
-                  echo ${{ secrets.DEVHUB_SFDX_URL}} 
+                  echo "${{ secrets.DEVHUB_SFDX_URL}}" 
                   
           # Authenticate dev hub
             - name: 'Authenticate Dev Hub'
