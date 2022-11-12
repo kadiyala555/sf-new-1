@@ -1,10 +1,12 @@
-{ 
-"packageDirectories" : [ 
-    { "path": "force-app", "default": true}, 
-    { "path" : "unpackaged" }, 
-    { "path" : "utils" } 
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
   ],
-"namespace": "", 
-"sfdcLoginUrl" : "https://login.salesforce.com", 
-"sourceApiVersion": "55.0"
+  "name": "sf-new-q",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "55.0"
 }
