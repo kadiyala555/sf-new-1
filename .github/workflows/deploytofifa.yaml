@@ -24,18 +24,18 @@ jobs:
                   ~/sfdx/bin/sfdx version
                   
         # Store secret for fifa org
-            - name: 'Populate auth file with fifa_SFDX_URL secret'
+            - name: 'Populate auth file with FIFA_SFDX_URL secret'
               shell: bash
               run: |
-                  echo ${{ secrets.fifa_SFDX_URL}} > ./fifa_SFDX_URL.txt
-                  secretFileSize=$(wc -c "./fifa_SFDX_URL.txt" | awk '{print $1}')
+                  echo ${{ secrets.FIFA_SFDX_URL}} > ./FIFA_SFDX_URL.txt
+                  secretFileSize=$(wc -c "./FIFA_SFDX_URL.txt" | awk '{print $1}')
                   if [ $secretFileSize == 1 ]; then
-                      echo "Missing fifa_SFDX_URL secret. Is this workflow running on a fork?";
+                      echo "Missing FIFA_SFDX_URL secret. Is this workflow running on a fork?";
                       exit 1;
                   fi
             # Authenticate fifa org
             - name: 'Authenticate fifa org'
-              run: sfdx auth:sfdxurl:store -f ./fifa_SFDX_URL.txt -a salesforcedevopsfifa -d
+              run: sfdx auth:sfdxurl:store -f ./FIFA_SFDX_URL.txt -a salesforcedevopsfifa -d
               
             # Deploy source to Acc org
             - name: 'Push source to  org'
