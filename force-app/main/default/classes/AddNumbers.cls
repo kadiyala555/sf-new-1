@@ -1,9 +1,9 @@
-//class testing pull request and find difference test. New changes!
+//class testing pull request and find difference test. Yet new changes!
 public with sharing class AddNumbers {
     public AddNumbers() {
         System.debug('Inside constructor');
     }
-
+// changes can be ignored here. 
     public Integer addandres(Integer firstnum, Integer secondnum){
         return firstnum+secondnum;
     }
