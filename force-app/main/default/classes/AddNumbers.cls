@@ -1,4 +1,4 @@
-//class testing pull request and find difference test getdiff new change is visible. 
+//class testing pull request and find difference and everything is possible.  
 public with sharing class AddNumbers {
     public AddNumbers() {
         System.debug('Inside constructor');
