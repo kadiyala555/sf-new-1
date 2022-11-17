@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Deploy integration branch to integration and staging/uat orgs
+name: Deploy Development branch to Development and UATFifa orgs
 
 # Definition when the workflow should run
 on:
