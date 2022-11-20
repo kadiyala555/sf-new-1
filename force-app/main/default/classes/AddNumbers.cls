@@ -1,7 +1,7 @@
 //class testing pull request and find difference test. This time, tring to sync with org, 
 public with sharing class AddNumbers {
     public AddNumbers() {
-        System.debug('Inside constructor');
+        System.debug('Inside the constructor');
     }
 
     public Integer addandres(Integer firstnum, Integer secondnum){
