@@ -155,6 +155,7 @@ jobs:
                   cd changed-sources && ls -a
                   cd destructiveChanges && ls -la
                   cat destructiveChanges.xml
+                  cat package.xml
                   sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'  
                   cd ..
             # Now we upload the .sarif file as explained in the previous step
