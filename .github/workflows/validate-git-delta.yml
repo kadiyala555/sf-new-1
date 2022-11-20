@@ -143,8 +143,6 @@ jobs:
             - name: 'Create delta packages for new, modified or deleted metadata'
               run: | 
                   mkdir changed-sources
-                  cd changed-sources && ls -a
-                  
                   sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
             # Now we can use the sfdx scanner to scan the code in the delta directory
             # The output of the scan is stored in a file called apexScanResults.sarif
@@ -154,7 +152,7 @@ jobs:
 
            # - name: 'Scan code'
            #   run: |
-           #       cd changed-sources
+           #       cd changed-sources && ls -a
            #       sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'  
            #       cd ..
             # Now we upload the .sarif file as explained in the previous step
