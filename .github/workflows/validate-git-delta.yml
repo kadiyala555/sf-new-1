@@ -16,8 +16,8 @@ on:
       # We only care about changes to the force-app directory, which is the
       # root directory of the sfdx project. This prevents the job from running
       # when changing non-salesforce files (like this yml file).
-  # paths:
-      #  - 'force-app/**'
+      paths:
+        - 'force-app/**'      
             
 
 # Jobs to be executed when the above conditions are met
@@ -153,6 +153,8 @@ jobs:
             - name: 'Scan code'
               run: |
                   cd changed-sources
+                  cd destructiveChanges
+                  cat destructiveChanges.xml
                   sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'  
                   cd ..
             # Now we upload the .sarif file as explained in the previous step
