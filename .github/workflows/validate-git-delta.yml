@@ -3,9 +3,9 @@ name: Validate PR on develop branch
 
 # Definition when the workflow should run
 on:
-    workflow_dispatch
     # The workflow will run whenever an event happens on a pull request
-   # pull_request:
+      # pull_request:
+       workflow_dispatch:
     #  # The events are that a PR is opened, or when a commit is pushed
       # to a branch that has an existing pull request
      # types: [opened, synchronize]
@@ -16,8 +16,8 @@ on:
       # We only care about changes to the force-app directory, which is the
       # root directory of the sfdx project. This prevents the job from running
       # when changing non-salesforce files (like this yml file).
-      paths:
-        - 'force-app/**'      
+       paths:
+         - 'force-app/**'      
             
 
 # Jobs to be executed when the above conditions are met
